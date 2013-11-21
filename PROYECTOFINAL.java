@@ -36,7 +36,7 @@ public class PROYECTOFINAL
     while (opcion<1 || opcion>11){
       stdOut.println("Menu Principal");
       stdOut.println("1 ");
-      stdOut.println("2 ");
+      stdOut.println("2 BANCOJAVA");
       stdOut.println("3 ");
       stdOut.println("4 ");
       stdOut.println("5 ");
@@ -56,6 +56,29 @@ public class PROYECTOFINAL
     }
     return opcion;
   }
+  public static void o2 () throws IOException
+  {
+    int numCuenta=0, numSaldo;
+    stdOut.println("Dame tu numero de cuenta");
+    numCuenta=Integer.parseInt(stdIn.readLine());
+    if (numCuenta>=0) {
+      stdOut.println("Dame tu saldo");
+      numSaldo=Integer.parseInt(stdIn.readLine());
+      if (numSaldo==0)
+        stdOut.println("No tiene deuda");
+      else if (numSaldo>0) {
+        stdOut.println("Usted debe "+numSaldo+" (ENTER)");
+        stdIn.readLine();
+      }
+      else {
+        stdOut.println("Usted tiene a favor en su cuenta " +(numSaldo*-1)+" (ENTER)");
+        stdIn.readLine();
+      }
+      }
+      if (numCuenta<0) {
+        stdOut.println("Cuenta no valida");
+      }
+  }
   public static void main (String [] args) throws IOException
   {
     int opcion=principio();//Se va la funcion principio donde se introduze el programa
@@ -63,17 +86,17 @@ public class PROYECTOFINAL
       do{
         opcion=menu();//Se va a la funcion menu donde se le muestran todas las opciones
         switch(opcion) {
-          case 1: break;
-          case 2: break;
-          case 3: break;
-          case 4: break;
-          case 5: break;
-          case 6: break;
-          case 7: break;
-          case 8: break;
-          case 9: break;
-          case 10: break;
-          case 11: break;//Sale del programa
+          case 1: o1(); break;
+          case 2: o2(); break;
+          case 3: o3(); break;
+          case 4: o4(); break;
+          case 5: o5(); break;
+          case 6: o6(); break;
+          case 7: o7(); break;
+          case 8: o8(); break;
+          case 9: o9(); break;
+          case 10: o10(); break;
+          case 11: o11(); break;//Sale del programa
         }
       }
       while(opcion!=11);
