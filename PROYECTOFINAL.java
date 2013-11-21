@@ -38,7 +38,7 @@ public class PROYECTOFINAL
       stdOut.println("1 ");
       stdOut.println("2 BANCOJAVA");
       stdOut.println("3 ");
-      stdOut.println("4 ");
+      stdOut.println("4 RELOJARENA");
       stdOut.println("5 ");
       stdOut.println("6 ");
       stdOut.println("7 ");
@@ -77,16 +77,52 @@ public class PROYECTOFINAL
         stdOut.println("Usted tiene a favor en su cuenta " +(numSaldo*-1)+" (ENTER)");
         stdIn.readLine();
       }
-      }
-      if (numCuenta<0) {
-        stdOut.println("Cuenta no valida");
-      }
+    }
+    if (numCuenta<0) {
+      stdOut.println("Cuenta no valida");
+    }
   }
   public static void o3 () throws IOException
   {
   }
   public static void o4 () throws IOException
   {
+    stdOut.println("Dame un numero de pisos");
+    int pisos=Integer.parseInt(stdIn.readLine());
+    //Primero checa si el numero es impar, si no lo es acaba el programa
+    if(pisos%2==0){
+      stdOut.println("Pisos no es impar");
+      stdOut.println("(ENTER) para continuar");
+      stdIn.readLine();
+    }
+    else {
+      String letrero="*";
+      String espacio="";
+      int y=pisos;
+      for(int x=1; x<pisos; x++)
+        letrero=letrero+"*";
+      stdOut.print(letrero);
+      stdOut.println();
+      //Num de pisos en reversa/2 -2
+      while(pisos>=(y/2+2)){
+        //esto quita un char al string y le da un espacio en cada loop
+        letrero = letrero.substring(0,letrero.length()-2);
+        espacio = espacio+" ";
+        stdOut.print(espacio+letrero);
+        stdOut.println();
+        pisos--;
+      }
+      while(pisos<y){
+        //esto da dos chars al string y le quita un char a los espacios en cada loop
+        letrero=letrero+"**";
+        espacio = espacio.substring(0,espacio.length()-1);
+        stdOut.print(espacio+letrero);
+        stdOut.println();
+        pisos++;
+      }
+      stdOut.println("(ENTER) para continuar");
+      stdIn.readLine();
+    }
   }
   public static void o5 () throws IOException
   {
@@ -116,16 +152,16 @@ public class PROYECTOFINAL
       do{
         opcion=menu();//Se va a la funcion menu donde se le muestran todas las opciones
         switch(opcion) {
-          case 1: o1(); break;
-          case 2: o2(); break;
-          case 3: o3(); break;
-          case 4: o4(); break;
-          case 5: o5(); break;
-          case 6: o6(); break;
-          case 7: o7(); break;
-          case 8: o8(); break;
-          case 9: o9(); break;
-          case 10: o10(); break;
+          case 1: o1(); break;//Va a las funcion 1
+          case 2: o2(); break;//Va a las funcion 2
+          case 3: o3(); break;//Va a las funcion 3
+          case 4: o4(); break;//Va a las funcion 4
+          case 5: o5(); break;//Va a las funcion 5
+          case 6: o6(); break;//Va a las funcion 6
+          case 7: o7(); break;//Va a las funcion 7
+          case 8: o8(); break;//Va a las funcion 8
+          case 9: o9(); break;//Va a las funcion 9
+          case 10: o10(); break;//Va a las funcion 10
           case 11: o11(); break;//Sale del programa
         }
       }
