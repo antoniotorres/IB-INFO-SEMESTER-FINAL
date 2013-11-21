@@ -129,6 +129,19 @@ public class PROYECTOFINAL
   }
   public static void o6 () throws IOException
   {
+    stdOut.println("Dame un numero");
+    int valor=Integer.parseInt(stdIn.readLine());
+    String BINARIO="";
+    while(valor!=0) {
+      if (valor%2==0)
+        BINARIO=BINARIO+"0";
+      else
+        BINARIO=BINARIO+"1";
+      valor=valor/2;
+    }
+    stdOut.println(new StringBuffer(BINARIO).reverse().toString());//Efentiziar el programa al utilizar las funciones de JAVA
+    stdOut.println("(ENTER) para continuar");
+    stdIn.readLine();
   }
   public static void o7 () throws IOException
   {
