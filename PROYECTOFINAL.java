@@ -35,15 +35,15 @@ public class PROYECTOFINAL
     int opcion=0;
     while (opcion<1 || opcion>11){
       stdOut.println("Menu Principal");
-      stdOut.println("1 ");
+      stdOut.println("1 ACUMULARJAVA");
       stdOut.println("2 BANCOJAVA");
-      stdOut.println("3 ");
+      stdOut.println("3 FACTORIAL");
       stdOut.println("4 RELOJARENA");
-      stdOut.println("5 ");
-      stdOut.println("6 ");
-      stdOut.println("7 ");
-      stdOut.println("8 ");
-      stdOut.println("9 ");
+      stdOut.println("5 SUMA DESDE 1");
+      stdOut.println("6 NUM a BINARIO");
+      stdOut.println("7 BINARIO a NUM");
+      stdOut.println("8 PALINDROMO");
+      stdOut.println("9 APPS");
       stdOut.println("10 ABOUT");
       stdOut.println("11 Salir");
       stdOut.println("Selecciona una opcion del menu utlizando el numero de la linea.");
