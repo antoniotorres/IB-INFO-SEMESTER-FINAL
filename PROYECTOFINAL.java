@@ -56,6 +56,9 @@ public class PROYECTOFINAL
     }
     return opcion;
   }
+  public static void o1 () throws IOException
+  {
+  }
   public static void o2 () throws IOException
   {
     int numCuenta=0, numSaldo;
@@ -78,6 +81,33 @@ public class PROYECTOFINAL
       if (numCuenta<0) {
         stdOut.println("Cuenta no valida");
       }
+  }
+  public static void o3 () throws IOException
+  {
+  }
+  public static void o4 () throws IOException
+  {
+  }
+  public static void o5 () throws IOException
+  {
+  }
+  public static void o6 () throws IOException
+  {
+  }
+  public static void o7 () throws IOException
+  {
+  }
+  public static void o8 () throws IOException
+  {
+  }
+  public static void o9 () throws IOException
+  {
+  }
+  public static void o10 () throws IOException
+  {
+  }
+  public static void o11 () throws IOException
+  {
   }
   public static void main (String [] args) throws IOException
   {
