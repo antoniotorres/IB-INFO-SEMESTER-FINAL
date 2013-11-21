@@ -203,9 +203,13 @@ public class PROYECTOFINAL
   }
   public static void o10 () throws IOException
   {
-  }
-  public static void o11 () throws IOException
-  {
+    stdOut.println("------------MARTON SOFTWARE------------");
+    stdOut.println("Creadores: Jose Antonio Torres");
+    stdOut.println("           Mario Gutierrez");
+    stdOut.println("Creado en JAVA bajo la liciencia GPLv2");
+    stdOut.println("Fecha: Nov 21, 2013");
+    stdOut.println("(ENTER) para continuar");
+    stdIn.readLine();
   }
   public static void main (String [] args) throws IOException
   {
@@ -224,7 +228,7 @@ public class PROYECTOFINAL
           case 8: o8(); break;//Va a las funcion 8
           case 9: o9(); break;//Va a las funcion 9
           case 10: o10(); break;//Va a las funcion 10
-          case 11: o11(); break;//Sale del programa
+          default: break;//Sale del programa
         }
       }
       while(opcion!=11);
