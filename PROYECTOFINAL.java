@@ -33,7 +33,7 @@ public class PROYECTOFINAL
   public static int menu () throws IOException
   {
     int opcion=0;
-    while (opcion<1 || opcion>8){
+    while (opcion<1 || opcion>11){
       stdOut.println("Menu Principal");
       stdOut.println("1 ");
       stdOut.println("2 ");
@@ -42,10 +42,13 @@ public class PROYECTOFINAL
       stdOut.println("5 ");
       stdOut.println("6 ");
       stdOut.println("7 ");
-      stdOut.println("8 ABOUT");
+      stdOut.println("8 ");
+      stdOut.println("9 ");
+      stdOut.println("10 ABOUT");
+      stdOut.println("11 Salir");
       stdOut.println("Selecciona una opcion del menu utlizando el numero de la linea.");
       opcion=Integer.parseInt(stdIn.readLine());
-      if(opcion<1 || opcion>8) {
+      if(opcion<1 || opcion>11) {
         //Se le notifica al usuario que la opcion que eliguio esta mal y se le pone un ReadLine para que pueda leerlo.
         stdOut.println("¡Opcion invalida, intente de nuevo! (ENTER)");
         stdIn.readLine();
@@ -57,12 +60,24 @@ public class PROYECTOFINAL
   {
     int opcion=principio();//Se va la funcion principio donde se introduze el programa
     if(opcion==1){
-      opcion=menu();//Se va a la funcion menu donde se le muestran todas las opciones
-//      switch(opcion) {
-//        
-//      }
+      do{
+        opcion=menu();//Se va a la funcion menu donde se le muestran todas las opciones
+        switch(opcion) {
+          case 1: break;
+          case 2: break;
+          case 3: break;
+          case 4: break;
+          case 5: break;
+          case 6: break;
+          case 7: break;
+          case 8: break;
+          case 9: break;
+          case 10: break;
+          case 11: break;//Sale del programa
+        }
+      }
+      while(opcion!=11);
     }
-    else
-      stdOut.println("Gracias por usar nuestro programa. :) Saliendo");
+      stdOut.println("Gracias por usar nuestro programa. :) Cerrando Programa");
   }
 }
