@@ -197,6 +197,26 @@ public class PROYECTOFINAL
   }
   public static void o8 () throws IOException
   {
+    stdOut.println("Dame un numero");
+    String text=stdIn.readLine();
+    int length = text.length();
+    int pal=0;
+    if(length%2!=0){
+      for(int x=length; x>1; x--){
+        if (text.charAt(length-x)==text.charAt(x-1))
+          pal=pal+2;
+        else
+          pal=pal+1;
+      }
+      if((pal%2)==0)
+        stdOut.println(text+" Es palindromo ");
+      else
+        stdOut.println("No puede ser palindromo");
+    }
+    else
+      stdOut.println("No puede ser palindromo");
+    stdOut.println("(ENTER) para continuar");
+    stdIn.readLine();
   }
   public static void o9 () throws IOException
   {
@@ -204,8 +224,8 @@ public class PROYECTOFINAL
   public static void o10 () throws IOException
   {
     stdOut.println("------------MARTON SOFTWARE------------");
-    stdOut.println("Creadores: Jose Antonio Torres");
-    stdOut.println("           Mario Gutierrez");
+    stdOut.println("Creadores: Jose Antonio Torres - A01193080");
+    stdOut.println("           Mario Gutierrez - A0119");
     stdOut.println("Creado en JAVA bajo la liciencia GPLv2");
     stdOut.println("Fecha: Nov 21, 2013");
     stdOut.println("(ENTER) para continuar");
@@ -233,6 +253,6 @@ public class PROYECTOFINAL
       }
       while(opcion!=11);
     }
-      stdOut.println("Gracias por usar nuestro programa. :) Cerrando Programa");
+    stdOut.println("Gracias por usar nuestro programa. :) Cerrando Programa");
   }
 }
