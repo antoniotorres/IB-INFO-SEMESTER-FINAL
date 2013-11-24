@@ -22,6 +22,7 @@ public class PROYECTOFINAL
     stdOut.println(" <__________\\______)\\__)");
     int opcion=0;
     while (opcion!=1 && opcion!=2){
+      //Se le dan dos opciones, si seleccionan otra se muestra un error, una opcion los manda a menu(), sino los saca.
       stdOut.println("Mostrar Menu (1)");
       stdOut.println("SALIR (2)");
       opcion=Integer.parseInt(stdIn.readLine());
@@ -33,6 +34,7 @@ public class PROYECTOFINAL
   public static int menu () throws IOException
   {
     int opcion=0;
+    //Se le muestra 11 opciones
     while (opcion<1 || opcion>11){
       stdOut.println("Menu Principal");
       stdOut.println("1 ACUMULARJAVA");
@@ -83,6 +85,7 @@ public class PROYECTOFINAL
     int numCuenta=0, numSaldo;
     stdOut.println("Dame tu numero de cuenta");
     numCuenta=Integer.parseInt(stdIn.readLine());
+    //Pide el numero de cuenta, luego numero de slado es positivo imprime lo que debe, sino imprime lo que tiene favor.
     if (numCuenta>=0) {
       stdOut.println("Dame tu saldo");
       numSaldo=Integer.parseInt(stdIn.readLine());
@@ -181,6 +184,7 @@ public class PROYECTOFINAL
     stdOut.println("Dame un numero");
     int valor=Integer.parseInt(stdIn.readLine());
     String BINARIO="";
+    //Va dividiendo entre 2 si hay residuo registra un 1 en la variable
     while(valor!=0) {
       if (valor%2==0)
         BINARIO=BINARIO+"0";
@@ -188,6 +192,7 @@ public class PROYECTOFINAL
         BINARIO=BINARIO+"1";
       valor=valor/2;
     }
+    //Se requiere invertir la variable
     stdOut.println(new StringBuffer(BINARIO).reverse().toString());//Efentiziar el programa al utilizar las funciones de JAVA
     stdOut.println("(ENTER) para continuar");
     stdIn.readLine();
@@ -197,13 +202,14 @@ public class PROYECTOFINAL
   }
   public static void o8 () throws IOException
   {
+    //Primero le pide al usuario un numero
     stdOut.println("Dame un numero");
-    String text=stdIn.readLine();
-    int length = text.length();
+    String text=stdIn.readLine();//Guarda el numero como una string
+    int length = text.length();//Guarda el tamano del numero
     int pal=0;
     if(length%2!=0){
       for(int x=length; x>1; x--){
-        if (text.charAt(length-x)==text.charAt(x-1))
+        if (text.charAt(length-x)==text.charAt(x-1))//Comopara la el primer numero con el ultimo
           pal=pal+2;
         else
           pal=pal+1;
@@ -221,35 +227,38 @@ public class PROYECTOFINAL
   public static void o9 () throws IOException
   {
     {
-int app1;
-int app2;
-int app3;
-int prom;
-int peso;
-int cap;
+      int app1;
+      int app2;
+      int app3;
+      int prom;
+      int peso;
+      int cap;
 //en esta seccion declare todas las variables que se van a ocupar en el proceso
-
-stdOut.println("Cuantos Gbs tiene tu tablet?");
-peso=Integer.parseInt(stdIn.readLine());
-stdOut.println("Muy bien, ahora necesito saber el tamano de 3 canciones que tengas");
-stdOut.println("Cuantos Megas pesa la primer cancion?");
-app1=Integer.parseInt(stdIn.readLine());
-stdOut.println("Cuantos Megas pesa la segunda cancion?");
-app2=Integer.parseInt(stdIn.readLine());
-stdOut.println("Cuanto Megas pesa la tercer cancion?");
-app3=Integer.parseInt(stdIn.readLine());
+      
+      stdOut.println("Cuantos Gbs tiene tu tablet?");
+      peso=Integer.parseInt(stdIn.readLine());
+      stdOut.println("Muy bien, ahora necesito saber el tamano de 3 canciones que tengas");
+      stdOut.println("Cuantos Megas pesa la primer cancion?");
+      app1=Integer.parseInt(stdIn.readLine());
+      stdOut.println("Cuantos Megas pesa la segunda cancion?");
+      app2=Integer.parseInt(stdIn.readLine());
+      stdOut.println("Cuanto Megas pesa la tercer cancion?");
+      app3=Integer.parseInt(stdIn.readLine());
 //en esta seccion se obtuvieron los valores con los que se va a operar
-
-peso= peso*1024;//esto converite de gigas a megas
-prom= (app1 + app2 + app3)/3; //esto obtiene el promedio de los pesos de las canciones
-cap= peso/prom; //esto obtiene la capacidad total restante
+      
+      peso= peso*1024;//esto converite de gigas a megas
+      prom= (app1 + app2 + app3)/3; //esto obtiene el promedio de los pesos de las canciones
+      cap= peso/prom; //esto obtiene la capacidad total restante
 //en esta seccion se hacen los calculos necesarios
-
-stdOut.println(" A tu tablet le caben " + cap + " canciones"); //esto imprime el resultado
-  }
+      
+      stdOut.println(" A tu tablet le caben " + cap + " canciones"); //esto imprime el resultado
+      stdOut.println("(ENTER) para continuar");
+      stdIn.readLine();
+    }
   }
   public static void o10 () throws IOException
   {
+    //Se imprime la informacion del programa
     stdOut.println("------------MARTON SOFTWARE------------");
     stdOut.println("Creadores: Jose Antonio Torres - A01193080");
     stdOut.println("           Mario Gutierrez - A0119");
