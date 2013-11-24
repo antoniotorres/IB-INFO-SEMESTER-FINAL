@@ -220,6 +220,33 @@ public class PROYECTOFINAL
   }
   public static void o9 () throws IOException
   {
+    {
+int app1;
+int app2;
+int app3;
+int prom;
+int peso;
+int cap;
+//en esta seccion declare todas las variables que se van a ocupar en el proceso
+
+stdOut.println("Cuantos Gbs tiene tu tablet?");
+peso=Integer.parseInt(stdIn.readLine());
+stdOut.println("Muy bien, ahora necesito saber el tamano de 3 canciones que tengas");
+stdOut.println("Cuantos Megas pesa la primer cancion?");
+app1=Integer.parseInt(stdIn.readLine());
+stdOut.println("Cuantos Megas pesa la segunda cancion?");
+app2=Integer.parseInt(stdIn.readLine());
+stdOut.println("Cuanto Megas pesa la tercer cancion?");
+app3=Integer.parseInt(stdIn.readLine());
+//en esta seccion se obtuvieron los valores con los que se va a operar
+
+peso= peso*1024;//esto converite de gigas a megas
+prom= (app1 + app2 + app3)/3; //esto obtiene el promedio de los pesos de las canciones
+cap= peso/prom; //esto obtiene la capacidad total restante
+//en esta seccion se hacen los calculos necesarios
+
+stdOut.println(" A tu tablet le caben " + cap + " canciones"); //esto imprime el resultado
+  }
   }
   public static void o10 () throws IOException
   {
