@@ -199,6 +199,23 @@ public class PROYECTOFINAL
   }
   public static void o7 () throws IOException
   {
+    int multi = 1;
+    int suma=0;
+    int x = 0;
+    stdOut.println("Dame el numero binario que quieres convertir a decimal");
+    String element = stdIn.readLine();
+    String s="";
+    for (x = element.length()-1; x>=0; x--) {
+      s = ""+element.charAt(x);
+      int entero= Integer.parseInt(s);
+      suma=suma+entero * multi;
+      multi=multi*2;
+    }
+    int total = suma;
+    multi = multi * 2;
+    stdOut.println(total);
+    stdOut.println("(ENTER) para continuar");
+    stdIn.readLine();
   }
   public static void o8 () throws IOException
   {
