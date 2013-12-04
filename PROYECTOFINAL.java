@@ -63,7 +63,7 @@ public class PROYECTOFINAL
     int suma= 0;
     int valor =0;
     do{
-      System.out.println("dame un valor. 9999 para salir");
+      System.out.println("dame un valor igual a 9999 para salir");
       valor= Integer.parseInt(stdIn.readLine());
       if( valor!=9999)
         suma= suma+valor;
@@ -165,10 +165,10 @@ public class PROYECTOFINAL
   }
   public static void o5 () throws IOException
   {
-    int x;
-    int f = 0;
+    long x;
+    long f = 0;
     stdOut.println("Introduzca el numero para el cual quiera saber la suma de todos su consecutivos positivos");
-    x =Integer.parseInt(stdIn.readLine());
+    x =Long.parseLong(stdIn.readLine());
     x= x+1;
     do
     {
