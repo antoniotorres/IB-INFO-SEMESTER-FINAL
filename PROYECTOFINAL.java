@@ -65,8 +65,10 @@ public class PROYECTOFINAL
     do{
       System.out.println("dame un valor igual a 9999 para salir");
       valor= Integer.parseInt(stdIn.readLine());
+      // se declaran las variables y se captura un valo
       if( valor!=9999)
         suma= suma+valor;
+        //se condiciona que el resto de este programa se ejecuta si el numero es diferente a 9999
     }
     while( valor!= 9999);
     stdOut.println("El acumulado es igual a " + suma);
@@ -76,8 +78,10 @@ public class PROYECTOFINAL
       stdOut.println("El acumulado es mayor a 0");
     else
       stdOut.println("El acumulado es menos a 0");
+      //se define si la suma de los valores fue mayor, menor o igual a 0
     stdOut.println("(ENTER) para continuar");
     stdIn.readLine();
+    //Se imprimen los valores finales
     
   }
   public static void o2 () throws IOException
@@ -110,17 +114,21 @@ public class PROYECTOFINAL
     long y=0;
     stdOut.println("De que numero quieres obtener factorial?");
     x= Long.parseLong(stdIn.readLine());
-    y=x-1;
-    if (x>0) {
+    //se declaran las variables x, y en la cual las dos son long
+    //se escoge long para poder trabajar con numeros grandes
+    //el x se remplaza por el valor deseado osea el numero que se quiere hacer factorial
+    y=x-1; //aqui y viene siendo el consecutivo menor de x
+    if (x>0) { //se condiciona que x tiene que ser mayor a 0 porque si no no puede sacar factorial
       do{
         x=x*y;
         y=y-1;
       }
-      while(y>0);
+      while(y>0); //repite un ciclo en el cual multiplica siempre por el consecutivo menor
+      //y siempre va alterandose y va bajando pero no puede llegar a 0
       stdOut.println("El factorial es igual a " +x);
     }
     else
-      stdOut.println("Numero no valido");
+      stdOut.println("Numero no valido");//finalmente imprime el valor o indica que no es valido
     stdOut.println("(ENTER) para continuar");
     stdIn.readLine();
   }
@@ -169,13 +177,16 @@ public class PROYECTOFINAL
     long f = 0;
     stdOut.println("Introduzca el numero para el cual quiera saber la suma de todos su consecutivos positivos");
     x =Long.parseLong(stdIn.readLine());
+    //se declara x, f, en los cuales los dos son long para poder trabajar con numeros grandes
+    //se captura x
     x= x+1;
     do
     {
       f= f + --x;
     }
-    while (x > 0);
-    stdOut.println("La suma total es de " + f);
+    while (x > 0);//notese que al principio se le sumo 1 para compensar el --x de al principio
+    //el ciclo se va repitiendo mientras x sea mayor a 0
+    stdOut.println("La suma total es de " + f);//imprime el valor final
     stdOut.println("(ENTER) para continuar");
     stdIn.readLine();
   }
@@ -278,7 +289,7 @@ public class PROYECTOFINAL
     //Se imprime la informacion del programa
     stdOut.println("------------MARTON SOFTWARE------------");
     stdOut.println("Creadores: Jose Antonio Torres - A01193080");
-    stdOut.println("           Mario Gutierrez - A0119");
+    stdOut.println("           Mario Gutierrez - A01039315");
     stdOut.println("Creado en JAVA bajo la liciencia GPLv2");
     stdOut.println("Fecha: Nov 21, 2013");
     stdOut.println("(ENTER) para continuar");
