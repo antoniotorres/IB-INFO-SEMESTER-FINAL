@@ -213,15 +213,18 @@ public class PROYECTOFINAL
     int multi = 1;
     int suma=0;
     int x = 0;
+    //Le pide al usuario un numero en binario
     stdOut.println("Dame el numero binario que quieres convertir a decimal");
     String element = stdIn.readLine();
     String s="";
+    //Loop agara char del string y lo pasa un entero, luego lo multiplica por dos, luego por cuatro, etc...
     for (x = element.length()-1; x>=0; x--) {
       s = ""+element.charAt(x);
       int entero= Integer.parseInt(s);
       suma=suma+entero * multi;
       multi=multi*2;
     }
+    //Suma cada entero
     int total = suma;
     multi = multi * 2;
     stdOut.println(total);
