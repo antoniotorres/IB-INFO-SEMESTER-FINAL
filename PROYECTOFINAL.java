@@ -1,3 +1,9 @@
+//Nombre de la Aplicacion: PROYECTOFINAL 1.0
+//Creado por: Jose Antonio Torres A01193080
+//            Mario Gutierrez     A01039315
+//Fecha: Diciembre 4, 2013
+//Licencia bajo el GPLv2
+//Busca el codigo fuente en GITHUB <https://github.com/antoniotorres/IB-INFO-SEMESTER-FINAL>
 import java.io.*;
 public class PROYECTOFINAL
 {
@@ -294,7 +300,7 @@ public class PROYECTOFINAL
     stdOut.println("Creadores: Jose Antonio Torres - A01193080");
     stdOut.println("           Mario Gutierrez - A01039315");
     stdOut.println("Creado en JAVA bajo la liciencia GPLv2");
-    stdOut.println("Fecha: Nov 21, 2013");
+    stdOut.println("Fecha: Dec 4, 2013");
     stdOut.println("(ENTER) para continuar");
     stdIn.readLine();
   }
